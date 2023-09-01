@@ -1,0 +1,15 @@
+{
+  "name": "final-module",
+  "version": "1.0.0",
+  "description": "Module to help search and display cryptocoins using the CoinCap api",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erick Herrera",
+  "license": "ISC",
+  "dependencies": {
+    "package.json": "^2.0.1",
+    "superagent": "^8.0.9"
+  }
+}
