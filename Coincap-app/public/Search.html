@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a class="btn btn-primary btn-block" href="Search.html" role="button">Search</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-primary btn-block" href="History.html" role="button">History</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-primary btn-block" href="API.html" role="button">API</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <p>Using the <a href="https://docs.coincap.io/">CoinCap</a> public API, this website allows users to search
+            for cryptocurrencies and give detailed information about that crypto.
+            These searches are saved to a database where the most searched coins can
+            be displayed by using the 'History' button.
+        </p>
+    </div>
+
+    <div class="container">
+        <form method="GET" action="/search" class="d-flex" id="queryForm">
+            <input class="form-control me-2" id="queryInput" type="text" 
+            name="coinName" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <p>
+            Website made by me! Erick Herrera<br>
+            My links:<br>
+            <a href="https://www.linkedin.com/in/erick-herrera-3000xzet/">LinkedIn</a><br>
+            <a href="https://github.com/Ginn3000">Github</a><br>
+        </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="search.js"></script>
+    <script src="../db/index.js"></script>
+
+</body>
+
+
+</html>

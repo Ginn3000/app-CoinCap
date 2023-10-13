@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a class="btn btn-primary btn-block" href="Search.html" role="button">Search</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-primary btn-block" href="History.html" role="button">History</a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-primary btn-block" href="API.html" role="button">API</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <table class="table table-striped" id="data-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+
+        <script>
+            // Function to populate the table with data
+            function populateTable(data) {
+                const table = document.getElementById('data-table').getElementsByTagName('tbody')[0];
+                data.forEach(item => {
+                    const row = table.insertRow(-1);
+                    const cell1 = row.insertCell(0);
+                    const cell2 = row.insertCell(1);
+                    cell1.textContent = item.results.display;
+                    cell2.textContent = item.results.id;
+                });
+            }
+    
+            // Fetch data from the backend and populate the table
+            fetch('/search/info')
+                .then(response => response.json())
+                .then(data => populateTable(data))
+                .catch(error => console.error(error));
+        </script>
+    </div>
+
+    <div class="container">
+        <p class="bottom-paragraph">
+            Website made by me! Erick Herrera<br>
+            My links:<br>
+            <a href="https://www.linkedin.com/in/erick-herrera-3000xzet/">LinkedIn</a><br>
+            <a href="https://github.com/Ginn3000">Github</a><br>
+        </p>
+     </div>
+
+</body>
+
+
+</html>
